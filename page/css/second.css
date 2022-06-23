@@ -1,0 +1,67 @@
+    .u{
+    text-decoration: underline;
+    }
+    body{
+        color:darkseagreen;
+        background-color: peru;
+    }
+    .myHeaders{
+        color:blue;
+        font-family:sans-serif      
+    }
+    .myParagraphs{
+        font-size:larger;
+        font-family:'Courier New', Courier, monospace;
+    }
+    .myLinks{
+        color:crimson;
+        font-size: large;
+        font-family:sans-serif;
+    }
+    .myImages{
+        font-weight:500;
+        fill:darkcyan;
+        color:darkkhaki;
+        display:flex;
+    }
+    .myText{
+        text-align: center;
+        outline:5px solid #222;
+        display:inline;
+        margin:0 600px 0 600px;
+        background-color: yellowgreen;
+        color:red
+    }
+    .myButton{
+        text-align: center;
+        outline:5px solid #222;
+        display:inline;
+        margin:168px 100px 0px 400px;
+        background-color: yellowgreen;
+        color:red;
+    }
+    .slots{
+        background-color: white;
+        width:300px;
+        height:100px;
+        z-index: 12;
+        display: inline-block;
+        margin:0px 0px 0px 500px;
+    }
+    .second1{
+        height: 150px;
+    }
+    .leafShape{
+        outline:5px solid #222;
+        display:inline-block;
+        width: 30%;
+        height: 30%;
+        background-position: center center;
+        background-size: cover;
+        border:5px solid #222;
+        border-radius: 25% 25% 25% 25%;
+        box-shadow: 25px 25px 10px #00101a;
+        margin:20px;
+        transition:all 1s;
+        background-color: #da2;
+    }

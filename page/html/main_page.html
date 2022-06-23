@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Webpage</title>
+        <link rel="shortcut icon" href="../icon/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/mystyle.css">
+    </head>
+    <body id = "cursorUsage">
+        <div class = "bigDiv">
+            <button id = "myButton" onclick = "changeColor()"> Hello. </button>
+            <button id = "petButton" onclick = "announcePets()"> Our pet's names are: </button>
+            <button id = "textButton" onclick = "changeInnerText()"> Clicking me will change my text? </button>
+            <script>
+                function changeColor() {
+                    document.getElementById("myButton").style.color = "blue";
+                }
+                let current = 1;
+                let multiplier = 2;
+                let pets = {
+                    " Drac " : "Cat",
+                    " Nimbus " : "Cat",
+                    " Zama " : "Cat",
+                    " Tribble " : "Dog"
+                }
+                function announcePets() {
+                    for (let pet in pets){
+                        alert(pet.trim());
+                    }
+                }
+                function changeInnerText() {
+                    document.getElementById("textButton").innerHTML = "My text has changed!";
+                }
+                function doubleText() {
+                    text = document.getElementById(current + "n").innerHTML;
+                    number = parseInt(text);
+                    newNumber = number * multiplier;
+                    current++;
+                    document.getElementById("megaDiv").innerHTML += " <p id = '" + current + "n'> " + newNumber.toLocaleString('fullwide', { useGrouping: false }) + " </p>";
+                    multiplier++
+                }
+                function multiText() {
+                    for(times=0;times<10;times++) {
+                        doubleText();
+                    }
+                }
+                //function rainbowText()
+                function delay(time) {
+                    return new Promise(resolve => setTimeout(resolve, time));
+                }
+                currentlyFlipped = [false, false, false, false, false, false, false, false, false, false, false, false]
+                let isNotRunning = true;
+                function revealInfo(dogN){
+                    if(isNotRunning){
+                        isNotRunning = false;
+                        if(currentlyFlipped[dogN-1]){
+                            currentlyFlipped[dogN-1] = false;
+                            setTimeout(function (){
+                                document.getElementById("dogback" + dogN).id = "dog" + dogN; // changes id so that there's no more image
+                            }, 1001)
+                            setTimeout(function (){
+                                document.getElementById("dogback" + dogN).className = "leafShape";
+                            }, 1000) // does the unflipped shape after a second
+                            document.getElementById("dogback" + dogN).className = "leafShapeTransition"; // does the transition shape immediately
+                            
+                        } else {
+                            currentlyFlipped[dogN-1] = true; // shows that it is now going to be flipped
+                            setTimeout(function (){
+                                document.getElementById("dog" + dogN).id = "dogback" + dogN; // changes id so that there's an image
+                            }, 1001)
+                            setTimeout(function (){
+                                document.getElementById("dog" + dogN).className = "leafShapeBackside";
+                            }, 1000) // does the flipped shape after a second
+                            document.getElementById("dog" + dogN).className = "leafShapeTransition"; // does the transition shape immediately
+                        }
+                        isNotRunning = true;
+                    }
+                }
+            </script>
+            <script src = "../js/newjs.js"></script>
+            <h3 class = "fixedHeader">
+                Sticky Header
+            </h3>
+            <!--
+                Links Go Here
+            -->
+            <div class = "myLinks">
+                <div id = "top">
+                    <a href="#bottom">
+                        Go to Bottom
+                    </a>
+                </div>
+            </div>
+            <!--
+                Headers Go Here
+            -->
+            <div class = "myHeaders">
+                <h1 title = "h1">
+                    Header Size 1
+                </h1>
+                <h2 title = "h2">
+                    Header Size     2
+                </h2>
+                <h3 title = "h3">
+                    Header      Size       3
+                </h3>
+                <h4 title = "h4">
+                    Header Size 4
+                </h4>
+                <h5 title = "h5">
+                    Header Size 5
+                </h5>
+                <h6 title = "h6">
+                    Header Size 6
+                </h6>
+            </div>
+            <p> There is a break soon... </br> Here is the break.</p>
+            <!--
+                Shadow Paragraphs Go Here
+            -->
+            <div class = "myParagraphs textShadow" title="Shadow Paragraphs">
+                <p title='Lorem ipsum'>
+                    <b> 
+                        Lorem ipsum
+                    </b> 
+                    dolor sit amet consectetur adipisicing elit. In, qui repellendus eos molestias, 
+                    <br>
+                    <span class = "u">harum voluptas fuga sequi iure, placeat eligendi rem reprehenderit expedita quia cumque?</span>
+                    <br> 
+                    Repudiandae magnam eaque non sint!  
+                </p>
+                <hr>
+                <p title='Lorem ipsum'>
+                    <b>Lorem ipsum</b> dolor sit amet consectetur adipisicing elit. In, qui repellendus eos molestias, harum voluptas fuga sequi iure, placeat eligendi rem reprehenderit expedita quia cumque? Repudiandae magnam eaque non sint!
+                </p>
+            </div>
+            <!--
+                Links Go Here
+            -->
+            <div class = "myLinks" title = "Linky Links">
+                <a href="../html/second_page.html" title="Second HTML">
+                    Go to second page
+                </a>
+                </br>
+                <a href="https://www.google.com" target="_blank">
+                    Go to Google
+                </a>
+            </div>
+        </div>
+        <!--
+           v-- Repeating Multiplier Down
+        -->
+        <div id = "megaDiv" style="font-size:xx-large">
+            <button onclick = "multiText()"> Double the text! </button>
+            <p id = "1n"> 1 </p>
+        </div>
+        <div class = 'test'>
+
+        </div>
+        <!--
+            Dog Photos Go Here
+        -->
+        <div class="myImages">
+            <div class="leafShape" id="dog1" onclick = "revealInfo(1)">
+                    
+            </div> 
+            <div class="leafShape" id="dog2" onclick = "revealInfo(2)">
+
+            </div>
+            <div class="leafShape" id="dog3" onclick = "revealInfo(3)">
+
+            </div>
+            <div class="leafShape" id="dog4" onclick = "revealInfo(4)">
+
+             </div>
+            <div class="leafShape" id="dog5" onclick = "revealInfo(5)">
+
+            </div>
+            <div class="leafShape" id="dog6" onclick = "revealInfo(6)">
+
+            </div>
+            <div class="leafShape" id="dog7" onclick = "revealInfo(7)">
+
+            </div>
+            <div class="leafShape" id="dog8" onclick = "revealInfo(8)">
+
+            </div>
+            <div class="leafShape" id="dog9" onclick = "revealInfo(9)">
+
+            </div>
+            <div class="leafShape" id="dog10" onclick = "revealInfo(10)">
+
+            </div>
+            <div class="leafShape" id="dog11" onclick = "revealInfo(11)">
+
+            </div>
+            <div class="leafShape" id="dog12" onclick = "revealInfo(12)">
+
+            </div>
+            <a href="https://www.funnycatpix.com" target="_blank">
+                <img 
+                src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
+                width="480"
+                >
+            </a>
+        </div>
+        <!--
+            Lists and Table Go Here
+        -->
+        <center>
+            <div class = "myLists">
+                <ol class="myL">
+                    <li>Hello 1</li>
+                    <li>Hello Again</li>
+                    <li>Hello the 3rd</li>
+                </ol>
+                <ul class="myL">
+                    <li>a</li>
+                    <li>b</li>
+                </ul>
+                <table border="1" width="30%">
+                    <tr>
+                        <th>
+                            Series 1
+                        </th>
+                        <th>
+                            Series 2
+                        </th>
+                        <th>
+                            Series 3
+                        </th>
+                        <th>
+                            Series 4
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            R1D1
+                        </td>
+                        <td>
+                            R1D2
+                        </td>
+                        <td>
+                            R1D3
+                        </td>
+                        <td>
+                            R1D4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            R2D1
+                        </td>
+                        <td>
+                            R2D2:)
+                        </td>
+                        <td>
+                            R2D3
+                        </td>
+                        <td>
+                            R2D4
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+        <!--
+            More Paragraphs Go Here
+        -->
+        <div class = "myParagraphs">
+            <p>
+                <span class = "u">
+                    According to all known laws
+                    of aviation,
+                </span>
+                <br>
+                    there is no way a bee
+                    should be able to fly.
+                <br>
+                    It's wings are too small to get
+                    it's fat little body off the ground.
+                <br>
+                    The bee, of course, flies anyway.
+            </p>
+            <div style="opacity:50%;">
+                <h1 class="myInline">
+                    Hello Solar System
+                </h1>
+                <p class="myInline">
+                    Hello World
+                </p>
+                <p class="myInline">
+                    Hello World Again
+                </p>
+            </div>
+        </div>
+        <!--
+            Forms Go Here
+        -->
+        <center>
+            <div class = "myMedia">
+                <form method="GET" action="myhtml.html">
+                    <div>
+                        <input type="password" name="password" value="Default Value Here" placeholder="Heres an password form">
+                    </div>
+                    <div>
+                        <textarea name="area" placeholder="placeholder text" cols="30" rows="10">Sample Text</textarea>
+                    </div>
+                    <div>
+                        <select name="selecter">
+                            <option value="disabled" disabled="disabled">
+                                Sad Sample Text
+                            </option>
+                            <option value="value1">
+                                Sample Text
+                            </option>
+                            <option value="value2">
+                                More Sample Text
+                            </option>
+                            <option value="default" selected="selected">
+                                Happy Sample Text
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/kK81m-A3qpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                    It Didnt Work?
+                </iframe>
+            </div>
+            <div class = "myLinks">
+                <div id = "bottom">
+                    <a href="#top">
+                    Go to Top
+                    </a>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

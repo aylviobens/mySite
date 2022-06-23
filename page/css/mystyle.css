@@ -1,0 +1,346 @@
+::selection{
+    background-color:rgb(236, 54, 30);
+    color:rgb(40, 176, 99);
+}
+.myL{
+    padding:0px 46% 0px 48%;
+}
+.p{
+    text-align: center;
+}
+#dogback1{
+    background-color:slategrey;
+}
+#dogback2{
+    background-color:slategrey;
+}
+#dogback3{
+    background-color:slategrey;
+}
+#dogback4{
+    background-color:slategrey;
+}
+#dogback5{
+    background-color:slategrey;
+}
+#dogback6{
+    background-color:slategrey;
+}
+#dogback7{
+    background-color:slategrey;
+}
+#dogback8{
+    background-color:slategrey;
+}
+#dogback9{
+    background-color:slategrey;
+}
+#dogback10{
+    background-color:slategrey;
+}
+#dogback11{
+    background-color:slategrey;
+}
+#dogback12{
+    background-color:slategrey;
+}
+#dog1{
+    background-image: url("../image/dog1.jpg");
+}
+#dog1:hover::before{
+    display:inline-block;
+    content: "My Name Is Daisy";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog2{
+    background-image: url("../image/dog2.jpg");
+}
+#dog2:hover::before{
+    display:inline-block;
+    content: "My Name Is Samson";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog3{
+    background-image: url("../image/dog3.jpg");
+}
+#dog3:hover::before{
+    display:inline-block;
+    content: "My Name Is Jellybean";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog4{
+    background-image: url("../image/dog4.jpg");
+}
+#dog4:hover::before{
+    display:inline-block;
+    content: "My Name Is Vivian";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog5{
+    background-image: url("../image/dog5.jpg");
+}
+#dog5:hover::before{
+    display:inline-block;
+    content: "My Name Is Ruthy";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog6{
+    background-image: url("../image/dog6.jpg");
+}
+#dog6:hover::before{
+    display:inline-block;
+    content: "My Name Is Kalvin";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog7{
+    background-image: url("../image/dog7.jpg");
+}
+#dog7:hover::before{
+    display:inline-block;
+    content: "My Name Is Tessa";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog8{
+    background-image: url("../image/dog8.jpg");
+}
+#dog8:hover::before{
+    display:inline-block;
+    content: "My Name Is Heather";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog9{
+    background-image: url("../image/dog9.jpg");
+}
+#dog9:hover::before{
+    display:inline-block;
+    content: "My Name Is Nerf";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog10{
+    background-image: url("../image/dog10.jpg");
+}
+#dog10:hover::before{
+    display:inline-block;
+    content: "My Name Is Gando";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog11{
+    background-image: url("../image/dog11.jpg");
+}
+#dog11:hover::before{
+    display:inline-block;
+    content: "My Name Is Fido";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+}
+#dog12{
+    background-image: url("../image/dog12.jpg");
+}
+#dog12:hover::before{
+    display:inline-block;
+    content: "My Name Is Fluffy";
+    background-color:#ddd;
+    border: 3px solid gray;
+    z-index:1;
+    position:absolute;
+    left:50%;
+    color:black;
+}
+.fixedHeader{
+    position:sticky;
+    border:3px solid rgba(128, 128, 128, 0.5);
+    background-color:rgba(192, 192, 192, 0.5);
+    top:0;
+    left:25%;
+    width:50%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color:tomato;
+}
+.bigDiv{
+    background-color: lightgreen;
+    color:rgb(233, 217, 76);
+    border: 5px dashed cyan; 
+}
+.leafShape{
+    outline:5px solid #333;
+    display:inline-block;
+    width: 26%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    border:5px solid #222;
+    border-radius: 40% 0 40% 0;
+    box-shadow: 25px 25px 10px #00101a;
+    margin:2%;
+    transition:all 1s;
+    color: rgba(0, 0, 35, 1)
+}
+.leafShapeTransition{
+    outline:5px solid #333;
+    display:inline-block;
+    width: 0%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    border:0px solid #222;
+    border-radius: 40% 0 40% 0;
+    box-shadow: 25px 25px 10px #00101a;
+    margin:2% 15.25%;
+    transition:all 1s;
+    color: rgba(0, 0, 35, 1)
+}
+.leafShapeBackside{
+    outline:5px solid #333;
+    display:inline-block;
+    width: 26%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    border:5px solid #222;
+    border-radius: 0 40% 0 40%;
+    box-shadow: 25px 25px 10px #00101a;
+    margin:2%;
+    transition:all 1s;
+    background-image:none;
+    color: rgba(0, 0, 35, 1)
+}
+.leafShape:hover{
+    outline:5px solid #333;
+    display:inline-block;
+    width: 28%;
+    height: 500px;
+    background-position: center center;
+    background-size: cover;
+    border:5px solid #222;
+    border-radius: 40% 0 40% 0;
+    box-shadow: 25px 25px 10px #00101a;
+    margin:1%;
+    filter:contrast(120%);
+}
+.myInline {
+    text-align: center;
+    display:inline-block;
+    width: 200px;
+    height: 200px;
+}
+.myHeaders{
+    color:cornflowerblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    background-color: blueviolet;   
+    text-align: center; 
+}
+.myParagraphs{
+    font-size:larger;
+    font-family:fantasy;
+    text-align:center;
+}
+.myLists{
+    font-size:small;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:indianred;
+    background-color: blue;
+    margin:50px auto;
+}
+.u{
+    text-decoration: underline;
+}
+.myLinks{
+    color:crimson;
+    font-size: large;
+    font-family:sans-serif;
+    text-align:center;
+}
+.myMedia{
+    background-color: dimgray;
+    color:rosybrown;
+    font-family: monospace;
+}
+.textShadow{
+    text-shadow: 3px 3px 2px goldenrod;
+}
+img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border: 10px solid darkblue;
+    border-radius:6px;
+}
+body{
+    background-color:paleturquoise;
+    color:peru;
+    font-family: cursive;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=178366);
+}
+.megaDiv {
+    font-size: xx-large;
+}
+.myImages{
+    display:flexbox;
+    width:100%;
+    height:100%;
+    flex:auto;
+}
+.test {
+	background: linear-gradient(-45deg, red, orange, yellow, green, blue, purple);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+    width:500px;
+    height:500px
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+    100% {
+		background-position: 0% 0%;
+	}
+}

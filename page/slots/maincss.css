@@ -1,0 +1,28 @@
+body{
+    background-color: #445;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.slotsArea{
+    background-color: #667;
+    width:50%;
+    height:20%;
+    display:flex
+}
+.slotsArea div {
+    width:80%;
+    height:80%;
+    background-color:#999;
+    margin:3.5%;
+}
+.slotsArea div img {
+    width:88%;
+    height:88%;
+    margin:6%;
+    background-color: #bbc;
+    font-size:xx-large;
+}
+@media screen {
+    
+}
